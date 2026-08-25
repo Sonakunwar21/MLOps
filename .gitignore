@@ -1,0 +1,27 @@
+#Virtual environment
+.venv/
+venv/
+mlops_env/     # WRITE NAME OF YOUR CONDA ENVIRONMENT
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment variables / secrets
+.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE/editor settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build/package files
+build/
+dist/
+*.egg-info/
