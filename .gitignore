@@ -1,7 +1,7 @@
 #Virtual environment
 .venv/
 venv/
-mlops_env/     # WRITE NAME OF YOUR CONDA ENVIRONMENT
+MLOps_day1_env/     
 
 # Python cache
 __pycache__/
