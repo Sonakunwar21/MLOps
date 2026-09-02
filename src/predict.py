@@ -4,7 +4,7 @@ import numpy as np
 
 model = joblib.load("Models\\linear_reg_model.pkl")
 
-new_data = pd.DataFrame([[123, 56, 89]])
+new_data = pd.DataFrame([[123, 56, 89]],columns =["TV","radio", "newspaper"])
 
 prediction = model.predict(new_data)
 
