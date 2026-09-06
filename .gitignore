@@ -1,10 +1,7 @@
 #Virtual environment
 .venv/
 venv/
-MLOps_day1_env/     
 workshop_mlops/
-notebooks/mlflow.db
-notebooks/mlruns/
 
 # Python cache
 __pycache__/
