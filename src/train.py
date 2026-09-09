@@ -15,8 +15,7 @@ os.makedirs(MODELS_DIR, exist_ok=True)
 DATA_PATH = os.path.join(BASE_DIR, "data", "data.csv")
 DB_PATH = os.path.join(BASE_DIR, "mlflow.db")
 #1. Setup Tracking
-
-mlflow.set_tracking_uri("sqlite:///mlflow.db")
+mlflow.set_tracking_uri(f"sqlite:///{DB_PATH}")
 experiment_name = "Advertising_Sales_Regression"
 registered_model_name = "Sales_Prediction_Model"
 mlflow.set_experiment (experiment_name)
