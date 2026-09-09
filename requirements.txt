@@ -4,5 +4,5 @@ scikit-learn
 matplotlib
 seaborn
 mlflow
-stremlit
+streamlit
 pytest
