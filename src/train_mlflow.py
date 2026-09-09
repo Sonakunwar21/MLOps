@@ -12,7 +12,8 @@ from sklearn.metrics import root_mean_squared_error
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MODELS_DIR = os.path.join(BASE_DIR, "models")
 os.makedirs(MODELS_DIR, exist_ok=True)
-
+DATA_PATH = os.path.join(BASE_DIR, "data", "data.csv")
+DB_PATH = os.path.join(BASE_DIR, "mlflow.db")
 #1. Setup Tracking
 
 mlflow.set_tracking_uri("sqlite:///mlflow.db")
@@ -21,8 +22,11 @@ registered_model_name = "Sales_Prediction_Model"
 mlflow.set_experiment (experiment_name)
 
 #2. Data Preparation
+if not os.path.exists(DATA_PATH):
+    raise FileNotFoundError(f"Data file missing at {DATA_PATH}")
 
-df = pd.read_csv("C:\\Users\\saura\\chapter 1\\MLOps\\data\\Data.csv")
+df = pd.read_csv(DATA_PATH)
+
 X = df[["TV", "radio", "newspaper"]]
 y = df["sales"]
 
